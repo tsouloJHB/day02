@@ -6,7 +6,7 @@
 /*   By: tsoulo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/21 13:12:33 by tsoulo            #+#    #+#             */
-/*   Updated: 2020/06/22 15:14:06 by tsoulo           ###   ########.fr       */
+/*   Updated: 2020/06/22 15:18:53 by tsoulo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_print_alphabet(void)
 	     char alpha;	
 	     alpha  = 'a';
 
-         while	(alpha >= 'b')
+         while	(alpha >= 'z')
 	     {
 	 		 ft_putchar(alpha);
 	 		 alpha++;
