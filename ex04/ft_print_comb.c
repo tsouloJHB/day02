@@ -6,37 +6,45 @@
 /*   By: tsoulo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 16:02:09 by tsoulo            #+#    #+#             */
-/*   Updated: 2020/06/17 17:18:46 by tsoulo           ###   ########.fr       */
+/*   Updated: 2020/06/22 12:39:16 by tsoulo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+int		ft_putchar(char c);
 
-int ft_putchar(char c){
- write(1,&c,1);
- return (0);
-}
+void	ft_print_comb(void)
+{
+	int li;
+	int ls;
+	int k;
 
-
-void ft_print_comb(){
-
- int i = '0';
- int j = '0';
- int k = '0';
- int l = '0';
-    while ( i <= '9') {
-        ft_putchar(i);
-		while(j <= '9'){
-			ft_putchar(j);
-			j++;
+	li = '0';
+	ls = '0';
+	k = '0';
+    while (li <= '9')
+   	{
+    	ls = li +1;
+		while (ls <= '9')
+		{
+			k = ls+1;
+			while (k <= '9')
+			{
+				if (k != li && k != ls)
+				{
+                   ft_putchar(li);
+				   ft_putchar(ls);
+				   ft_putchar(k);
+				   ft_putchar(',');
+				}
+				k++;
+			}
+			ls++;
+			k= '0';
 		}
-    i++;	
-	j = i+1;
+     li++;
+     ls = '0';
   }
 }
-
-int main(){
-   ft_print_comb(); 
-	return(0);
 
